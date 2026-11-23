@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be7d40f171e594a4aaf4d855874a9429, type: 3}
+  m_Name: Level5
+  m_EditorClassIdentifier: Game::LevelData
+  levelName: Silo 5
+  room:
+    m_AssetGUID: 70bb41ef7b8abe24ab5eedf277d144f3
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
+  music:
+    m_AssetGUID: 96f6edeea4f9ff54db9a0e78c7639b50
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
+  color: {r: 1, g: 0.85, b: 0.25, a: 1}
