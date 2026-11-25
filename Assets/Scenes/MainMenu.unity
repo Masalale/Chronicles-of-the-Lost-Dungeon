@@ -817,7 +817,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Defeat the guardians to unseal the chest, then take the shard.
+  m_text: Defeat every enemy to unseal the chest, then take the shard.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c3d5ee88989b46b438be6dad3cc0ed28, type: 2}
   m_sharedMaterial: {fileID: -6908010564989654454, guid: c3d5ee88989b46b438be6dad3cc0ed28, type: 2}
@@ -2983,7 +2983,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Your torch is your life, and it carries to the next Silo.
+  m_text: Your torch is your health, and it carries to the next Silo.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c3d5ee88989b46b438be6dad3cc0ed28, type: 2}
   m_sharedMaterial: {fileID: -6908010564989654454, guid: c3d5ee88989b46b438be6dad3cc0ed28, type: 2}
@@ -4177,7 +4177,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Riddle Keeper: right = torch +1, wrong = torch -1.'
+  m_text: 'Riddle Keeper: right first try = +1 torch, wrong = -1.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c3d5ee88989b46b438be6dad3cc0ed28, type: 2}
   m_sharedMaterial: {fileID: -6908010564989654454, guid: c3d5ee88989b46b438be6dad3cc0ed28, type: 2}
@@ -5088,11 +5088,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: 'The lights in the Silos have gone out. The light broke into five shards,
-    one hidden in each Silo, and monsters now live in the dark.
+    one hidden in each Silo, and enemies now hide in the dark.
 
 
     You are the
-    last Flame Keeper. Your torch is your life. Find the five shards and bring the
+    last Flame Keeper. Your torch is your health. Find the five shards and bring the
     light back.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c3d5ee88989b46b438be6dad3cc0ed28, type: 2}
@@ -8503,7 +8503,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Hit the ogre when its blue shield is down.
+  m_text: Guards turn blue while shielded and can't be hurt.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c3d5ee88989b46b438be6dad3cc0ed28, type: 2}
   m_sharedMaterial: {fileID: -6908010564989654454, guid: c3d5ee88989b46b438be6dad3cc0ed28, type: 2}

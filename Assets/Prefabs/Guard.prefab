@@ -109,7 +109,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Game::GuardBehaviour
   shieldTime: 1.5
   openTime: 2
-  shieldColor: {r: 0.5, g: 0.7, b: 1, a: 1}
+  shieldColor: {r: 0.3, g: 0.5, b: 1, a: 1}
 --- !u!58 &8414193376514042716
 CircleCollider2D:
   m_ObjectHideFlags: 0

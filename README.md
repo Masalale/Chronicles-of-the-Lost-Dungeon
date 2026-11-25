@@ -4,7 +4,7 @@ A top-down 2D dungeon game in Unity: as the last Flame Keeper, fight through fiv
 
 ## Features
 
-- **Five Silos**: beat every guardian to unseal the chest, take its shard, and the next Silo unlocks.
+- **Five Silos**: defeat every enemy to unseal the chest, take its shard, and the next Silo unlocks.
 - **Your torch is your health**: every hit or wrong answer shrinks the light around you and dims the whole Silo, and what's left carries into the next one.
 - **Two fire spells**: a fireball that flies at the nearest enemy, and another that fires in every direction.
 - **Three kinds of enemies**: Chasers find their way around walls to you, Shooters fire bolts, and Guards follow you slowly with a shield.

@@ -5872,7 +5872,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Your torch is your life, and it carries to the next Silo.
+  m_text: Your torch is your health, and it carries to the next Silo.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c3d5ee88989b46b438be6dad3cc0ed28, type: 2}
   m_sharedMaterial: {fileID: -6908010564989654454, guid: c3d5ee88989b46b438be6dad3cc0ed28, type: 2}
@@ -6184,7 +6184,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Defeat the guardians to unseal the chest, then take the shard.
+  m_text: Defeat every enemy to unseal the chest, then take the shard.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c3d5ee88989b46b438be6dad3cc0ed28, type: 2}
   m_sharedMaterial: {fileID: -6908010564989654454, guid: c3d5ee88989b46b438be6dad3cc0ed28, type: 2}
@@ -8442,9 +8442,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.OnScreen.OnScreenStick
   m_MovementRange: 100
-  m_DynamicOriginRange: 100
+  m_DynamicOriginRange: 120
   m_ControlPath: <Gamepad>/leftStick
-  m_Behaviour: 0
+  m_Behaviour: 2
   m_UseIsolatedInputActions: 0
   m_PointerDownAction:
     m_Name: 
@@ -11221,6 +11221,7 @@ GameObject:
   - component: {fileID: 1211742343}
   - component: {fileID: 1211742345}
   - component: {fileID: 1211742344}
+  - component: {fileID: 1211742346}
   m_Layer: 0
   m_Name: LevelName
   m_TagString: Untagged
@@ -11339,6 +11340,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &1211742346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1211742342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.ContentSizeFitter
+  m_HorizontalFit: 2
+  m_VerticalFit: 0
 --- !u!222 &1211742345
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -13500,7 +13515,17 @@ MonoBehaviour:
   desktopOnly:
   - {fileID: 2073578289}
   - {fileID: 1944313011}
+  - {fileID: 640313755}
+  - {fileID: 1810441401}
   hiddenOnWeb: []
+  leftSideHud:
+  - {fileID: 2111126943}
+  rightSideHud:
+  - {fileID: 991538063}
+  - {fileID: 760788738}
+  siloText: {fileID: 1211742343}
+  roomWidth: 1.52
+  mobileHudScale: 1.25
 --- !u!4 &1545180502
 Transform:
   m_ObjectHideFlags: 0
@@ -15930,7 +15955,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Hit the ogre when its blue shield is down.
+  m_text: Guards turn blue while shielded and can't be hurt.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c3d5ee88989b46b438be6dad3cc0ed28, type: 2}
   m_sharedMaterial: {fileID: -6908010564989654454, guid: c3d5ee88989b46b438be6dad3cc0ed28, type: 2}
@@ -16680,7 +16705,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Riddle Keeper: right = torch +1, wrong = torch -1.'
+  m_text: 'Riddle Keeper: right first try = +1 torch, wrong = -1.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c3d5ee88989b46b438be6dad3cc0ed28, type: 2}
   m_sharedMaterial: {fileID: -6908010564989654454, guid: c3d5ee88989b46b438be6dad3cc0ed28, type: 2}
