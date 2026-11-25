@@ -13523,7 +13523,9 @@ MonoBehaviour:
   rightSideHud:
   - {fileID: 991538063}
   - {fileID: 760788738}
-  siloText: {fileID: 1211742343}
+  leftSideUnscaled:
+  - {fileID: 10120785}
+  - {fileID: 1211742343}
   roomWidth: 1.52
   mobileHudScale: 1.25
 --- !u!4 &1545180502
