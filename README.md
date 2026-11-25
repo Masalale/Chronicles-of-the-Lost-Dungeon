@@ -2,15 +2,9 @@
 
 A top-down 2D dungeon game in Unity: as the last Flame Keeper, fight through five dark Silos and bring back the shards of their lost light.
 
-## Play
-
-- **Web**: [play on Unity Play](https://play.unity.com/en/games/d2e153d8-1e94-40e1-a4cc-b5c6a0ce87cf/the-flame-keepers)
-- **Windows**: [download the zip](https://github.com/Masalale/Chronicles-of-the-Lost-Dungeon/releases/download/v1.0/Chronicles-of-the-Lost-Dungeon-Windows.zip), unzip it and run `Chronicles of the Lost Dungeon.exe`
-- **Android**: [download the APK](https://github.com/Masalale/Chronicles-of-the-Lost-Dungeon/releases/download/v1.0/Chronicles-of-the-Lost-Dungeon-Android.apk) and install it on your phone
-
 ## Features
 
-- **Five Silos**: defeat every enemy to unseal the chest, take its shard, answer the Riddle Keeper, and the next Silo unlocks.
+- **Five Silos**: beat every guardian to unseal the chest, take its shard, and the next Silo unlocks.
 - **Your torch is your health**: every hit or wrong answer shrinks the light around you and dims the whole Silo, and what's left carries into the next one.
 - **Two fire spells**: a fireball that flies at the nearest enemy, and another that fires in every direction.
 - **Three kinds of enemies**: Chasers find their way around walls to you, Shooters fire bolts, and Guards follow you slowly with a shield.
@@ -46,12 +40,11 @@ A top-down 2D dungeon game in Unity: as the last Flame Keeper, fight through fiv
 
 ## Architecture
 
-- **Singleton**: `GameManager`, `SaveManager` and `AudioManager` are created once in the menu and survive scene changes, so every scene reads the same game state, save and volume.
+- `GameManager`, `SaveManager` and `AudioManager` are created once in the menu and survive scene changes, so every scene reads the same game state, save and volume.
 - Each Silo is one room prefab. Its `RoomController` counts the enemies, unseals the chest, wakes the Riddle Keeper and dims the light as the torch burns down.
-- **Observer**: systems talk through C# events instead of calling each other: enemies announce when they die, `Health` announces every change, and the HUD, audio and save listen. Adding a new listener doesn't touch the sender.
-- **Strategy**: abilities share one interface (`IAbility`) and enemy types share another (`IEnemyBehaviour`), so a new spell or enemy is a new component, not a change to `PlayerCombat` or `Enemy`.
-- **State**: an enemy is always in one state (`IdleState`, `ActiveState` or `DeadState`), and the state decides what it does each frame.
-- **Object pooling**: fireballs and bolts come from a `ProjectilePool` and go back to it when they hit, so nothing is created or destroyed on every shot.
+- Systems talk through C# events instead of calling each other: enemies announce when they die, `Health` announces every change, and the HUD, audio and save listen. Adding a new listener doesn't touch the sender.
+- Abilities share one interface (`IAbility`) and enemy types share another (`IEnemyBehaviour`), so a new spell or enemy is a new component, not a change to `PlayerCombat` or `Enemy`.
+- An enemy is always in one state (idle, active or dead), and the state decides what it does each frame.
 
 ## Algorithms
 
@@ -77,13 +70,7 @@ A top-down 2D dungeon game in Unity: as the last Flame Keeper, fight through fiv
 - **Releasing**: when the Silo ends (moving on, retrying after a game over, or going back to the menu), `RoomLoader` calls `ReleaseInstance` on the room and `Release` on the music, so only the current Silo is in memory.
 - **Build and deploy**:
   1. Open **File > Build Profiles**, pick **Windows**, **Android** or **Web**, and press **Switch Platform**.
-  2. Press **Build**. **Build Addressables on Player Build** is on, so the `Rooms` and `Music` content is built for that platform and packed inside the player. No content is downloaded from a server; each build carries its own copy.
-
-## REST API
-
-- **What**: the Riddle Keeper's true/false questions come from the [Open Trivia Database](https://opentdb.com) (`TriviaGate.cs`).
-- **How**: a GET request fetches the questions the Riddle Keeper asks.
-- **If it fails**: with no internet or a bad reply, the game uses its own backup questions, so the riddle always works.
+  2. Press **Build**. **Build Addressables on Player Build** is on, so the `Rooms` and `Music` content is built for that platform and packed inside the player. Nothing is hosted separately.
 
 ## Credits
 
